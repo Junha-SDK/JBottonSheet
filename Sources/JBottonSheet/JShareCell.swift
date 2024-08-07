@@ -5,7 +5,7 @@ import JLabel
 
 public class JShareCell: UITableViewCell {
     
-    public static let identifier = "MaeumGaGymShareCell"
+    public static let identifier = "JShareCell"
 
     public var mainTitle = JNLabel(text: "공유",
                                    font: UIFont.Pretendard.titleMedium,

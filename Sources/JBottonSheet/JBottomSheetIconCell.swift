@@ -5,7 +5,7 @@ import JLabel
 
 public class JBottomSheetIconCell: UITableViewCell {
     
-    public static let identifier = "MaeumGaGymBottomSheetIconCell"
+    public static let identifier = "JBottomSheetIconCell"
     
     public var iconImage = UIImageView().then {
         $0.tintColor = .white
