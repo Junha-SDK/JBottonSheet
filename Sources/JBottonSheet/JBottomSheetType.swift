@@ -1,8 +1,6 @@
-//
-//  File.swift
-//  
-//
-//  Created by 박준하 on 8/7/24.
-//
+import UIKit
 
-import Foundation
+public enum JBottomSheetType {
+    case plain
+    case navigation(title: String?)
+}

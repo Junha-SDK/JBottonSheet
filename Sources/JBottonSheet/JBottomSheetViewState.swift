@@ -1,8 +1,5 @@
-//
-//  File.swift
-//  
-//
-//  Created by 박준하 on 8/7/24.
-//
+import UIKit
 
-import Foundation
+public enum JBottomSheetViewState {
+    case collapsed, partiallyExpanded, fullyExpanded
+}

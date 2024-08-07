@@ -1,8 +1,30 @@
-//
-//  File.swift
-//  
-//
-//  Created by 박준하 on 8/7/24.
-//
+import UIKit
+import SnapKit
 
-import Foundation
+public final class JBottomSheetRootViewController: UIViewController {
+    
+    public let tableView = UITableView()
+    private var isFirstTimeAppear = true
+    
+    override public func loadView() {
+        view = tableView
+    }
+    
+    override public func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.backgroundColor = .gray
+    }
+    
+    override public func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let selectedRow = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selectedRow, animated: true)
+        }
+        if isFirstTimeAppear, let nav = navigationController {
+            nav.navigationBar.prefersLargeTitles = true
+            let topOffset = nav.isNavigationBarHidden ? 0 : nav.navigationBar.frame.height
+            tableView.setContentOffset(CGPoint(x: 0, y: -topOffset), animated: false)
+            isFirstTimeAppear = false
+        }
+    }
+}
